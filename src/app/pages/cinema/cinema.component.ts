@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FilmObject } from '../../shared/constants/constants';
 
 @Component({
   selector: 'app-cinema',
@@ -7,9 +6,5 @@ import { FilmObject } from '../../shared/constants/constants';
   styleUrls: ['./cinema.component.scss']
 })
 export class CinemaComponent {
-  filmObject: any = FilmObject;
 
-  reload() {
-    
-  }
 }

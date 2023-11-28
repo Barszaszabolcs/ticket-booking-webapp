@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ticket-booking-webapp';
-  page = 'cinema';
+  page = 'main';
+
+  changePage(selectedPage: string) {
+    this.page = selectedPage;
+  }
 }

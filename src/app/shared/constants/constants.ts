@@ -1,22 +1,27 @@
-export const FilmObject = {
-    '83': {
+export const FilmObject = [
+    {
+        'id': '83',
         'name': '83',
         'photo_location': 'images/83.jpg'
     },
-    'after': {
+    {
+        'id': 'after',
         'name': 'After',
         'photo_location': 'images/after.jpg'
     },
-    'darkness': {
+    {
+        'id': 'darkness',
         'name': 'Darkness',
         'photo_location': 'images/darkness.jpg'
     },
-    'header': {
+    {
+        'id': 'header',
         'name': 'Header',
         'photo_location': 'images/header.jpg'
     },
-    'jhon_wick_3': {
+    {
+        'id': 'jhon_wick_3',
         'name': 'Jhon Wick 3',
         'photo_location': 'images/jhon_wick_3.jpg'
     }
-}
+]

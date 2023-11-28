@@ -1,13 +1,23 @@
-<app-menu></app-menu>
-<ng-template [ngIf]="page === 'main'">
-  <div class="h-screen">
-    <app-main></app-main>
-  </div>
-</ng-template>
-<ng-template [ngIf]="page === 'cinema'">
-  <div class="h-screen">
-    <app-cinema></app-cinema>
-  </div>
-</ng-template>
+<app-menu (selectedPage)="changePage($event)"></app-menu>
+<ng-container [ngSwitch]="page">
+  <ng-container *ngSwitchCase="'main'">
+    <div class="h-screen">
+      <app-main></app-main>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="'film'">
+    <div class="h-screen">
+      <app-film></app-film>
+    </div>
+  </ng-container>
+  <!--<ng-container *ngSwitchCase="'cinema'">
+    <div class="h-screen">
+      <app-cinema></app-cinema>
+    </div>
+  </ng-container>-->
+  <ng-container *ngSwitchDefault>
+    <h1 class="text-white">Page not found...</h1>
+  </ng-container>
+</ng-container>
 
 <!--<router-outlet></router-outlet>-->
