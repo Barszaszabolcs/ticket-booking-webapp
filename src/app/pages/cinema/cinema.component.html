@@ -1,0 +1,17 @@
+<div>
+    <select #chosenImage (change)="reload()">
+        <option value="83">83</option>
+        <option value="after">after</option>
+        <option value="darkness">darkness</option>
+        <option value="header">header</option>
+        <option value="jhon_wick_3">jhon_wick_3</option>
+    </select>
+
+    <div class="flex items-center justify-center flex-wrap">
+        <div>
+            <p class="text-white">{{filmObject[chosenImage.value].name}}</p>
+        </div>
+        <div class="basis-full h-0"></div>
+        <img class="w-1/4 h-auto" [src]="'assets/images/' + chosenImage.value + '.jpg'" alt="">
+    </div>
+</div>
