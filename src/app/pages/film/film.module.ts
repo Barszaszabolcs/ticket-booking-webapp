@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FilmRoutingModule } from './film-routing.module';
 import { FilmComponent } from './film.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DateFormatPipe } from '../../shared/pipes/date-format.pipe';
 
 
@@ -15,7 +15,8 @@ import { DateFormatPipe } from '../../shared/pipes/date-format.pipe';
   imports: [
     CommonModule,
     FilmRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class FilmModule { }

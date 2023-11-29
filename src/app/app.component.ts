@@ -8,6 +8,7 @@ import { filter } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+  title = 'ticket-booking-webapp';
   page = '';
 
   routes: Array<string> = [];

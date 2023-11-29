@@ -1,0 +1,16 @@
+<div class="flex flex-col justify-center text-center h-screen">
+    <h1 class="text-white text-3xl">Login my boi!</h1>
+    <span class="m-3">
+        <label class="text-white" for="email">Email: </label>
+        <input type="text" [formControl]="email">
+    </span>
+    <span class="m-3">
+        <label class="text-white" for="password">Jelszó: </label>
+        <input type="password" [formControl]="password">
+    </span>
+    <span>
+        <button class="text-white p-2 m-3 bg-gray-400" (click)="login()">Bejelentkezés</button>
+        <button class="text-white p-2 m-3 bg-gray-400" [routerLink]="'/registration'">Regisztráció</button>
+    </span>
+</div>
+
