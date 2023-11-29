@@ -1,4 +1,4 @@
-<div>
+<div class="h-screen">
     <select (change)="reload()" [(ngModel)]="chosenImage">
         <option *ngFor="let obj of filmObject" [ngValue]="obj">{{obj.id}}</option>
     </select>
