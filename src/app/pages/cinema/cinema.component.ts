@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FilmObject } from '../../shared/constants/constants';
 
 @Component({
   selector: 'app-cinema',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CinemaComponent {
 
+  filmObject: Array<any> = FilmObject;
+
+  constructor() {}
 }

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FilmComponent } from './film.component';
 
 const routes: Routes = [
-  { path: '', component: FilmComponent}
+  { path: ':chosenFilm', component: FilmComponent}
 ];
 
 @NgModule({

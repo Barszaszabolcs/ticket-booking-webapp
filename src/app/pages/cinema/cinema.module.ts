@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CinemaRoutingModule } from './cinema-routing.module';
 import { CinemaComponent } from './cinema.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CinemaComponent } from './cinema.component';
   ],
   imports: [
     CommonModule,
-    CinemaRoutingModule
+    CinemaRoutingModule,
+    FormsModule
   ]
 })
 export class CinemaModule { }

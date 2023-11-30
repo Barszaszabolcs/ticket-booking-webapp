@@ -1,14 +1,10 @@
 <div class="h-screen">
-    <select (change)="reload()" [(ngModel)]="chosenImage">
-        <option *ngFor="let obj of filmObject" [ngValue]="obj">{{obj.id}}</option>
-    </select>
-
-    <div class="flex items-center justify-center flex-wrap" *ngIf="chosenImage">
+    <div class="flex items-center justify-center flex-wrap" *ngIf="chosenFilm">
         <div>
-            <p class="text-white">{{chosenImage.name}}</p>
+            <p class="text-white">{{chosenFilm}}</p>
         </div>
         <div class="basis-full h-0"></div>
-        <img class="w-1/4 h-auto" [src]="'assets/images/' + chosenImage.id + '.jpg'" alt="">
+        <img class="w-1/4 h-auto" [src]="'assets/images/' + chosenFilm + '.jpg'" alt="">
         <div class="basis-full h-0"></div>
         
         <div class="text-white" *ngIf="comments.length > 0">
@@ -19,9 +15,9 @@
                     <th class="border border-solid border-white">Dátum</th>
                 </tr>
                 <tr *ngFor="let comment of comments; let i = index;" [ngClass]="i % 2 === 0 ? 'bg-slate-300' : 'bg-orange-600'">
-                   <td class="border border-solid border-white">{{comment.username}}</td> 
-                   <td class="border border-solid border-white">{{comment.comment}}</td> 
-                   <td class="border border-solid border-white">{{comment.date | dateFormat}}</td> 
+                <td class="border border-solid border-white">{{comment.username}}</td> 
+                <td class="border border-solid border-white">{{comment.comment}}</td> 
+                <td class="border border-solid border-white">{{comment.date | dateFormat}}</td> 
                 </tr>
             </table>
         </div>

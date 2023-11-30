@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
-import { FilmObject } from '../../shared/constants/constants';
+import { Component, OnInit } from '@angular/core';
 import { Comment } from '../../shared/models/Comment';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-film',
   templateUrl: './film.component.html',
   styleUrls: ['./film.component.scss']
 })
-export class FilmComponent {
-  filmObject: Array<any> = FilmObject;
-  chosenImage: any;
+export class FilmComponent implements OnInit{
+
+  chosenFilm: string = '';
   comments: Array<Comment> = [];
 
   commentsForm = this.createForm({
@@ -19,11 +19,15 @@ export class FilmComponent {
     date: new Date()
   });
 
-  constructor(private fb: FormBuilder) {
-    this.chosenImage = this.filmObject[0];
+  constructor(private fb: FormBuilder, private actRoute: ActivatedRoute) {
   }
 
-  reload() {}
+  ngOnInit(): void {
+    this.actRoute.params.subscribe((param: any) => {
+      this.chosenFilm = param.chosenFilm as string;
+      console.log(this.chosenFilm);
+    })
+  }
 
   createForm(model: Comment) {
     let formGroup = this.fb.group(model);
