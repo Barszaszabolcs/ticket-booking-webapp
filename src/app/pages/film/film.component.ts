@@ -25,7 +25,6 @@ export class FilmComponent implements OnInit{
   ngOnInit(): void {
     this.actRoute.params.subscribe((param: any) => {
       this.chosenFilm = param.chosenFilm as string;
-      console.log(this.chosenFilm);
     })
   }
 
