@@ -1,7 +1,18 @@
-<select [(ngModel)]="currentPage" (change)="menuSwitch()">
-    <option value="login">Bejelentkezés</option>
-    <option value="registration">Regisztráció</option>
-    <option value="main">Főoldal</option>
-    <option value="cinema">Cinema</option>
-    <option value="film">Film</option>
-</select>
+<mat-nav-list>
+    <a mat-list-item routerLink="/login" (click)="close()">
+        <mat-icon>login</mat-icon>
+        <span>Bejelentkezés</span>
+    </a>
+    <a mat-list-item routerLink="/registration" (click)="close()">
+        <mat-icon>app_registration</mat-icon>
+        <span>Regisztráció</span>
+    </a>
+    <a mat-list-item routerLink="/main" (click)="close()">
+        <mat-icon>home</mat-icon>
+        <span>Főoldal</span>
+    </a>
+    <a mat-list-item routerLink="/cinema" (click)="close()">
+        <mat-icon>movie</mat-icon>
+        <span>Cinema</span>
+    </a>
+</mat-nav-list>

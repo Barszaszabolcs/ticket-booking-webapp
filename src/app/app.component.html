@@ -1,23 +1,32 @@
-<app-menu (selectedPage)="changePage($event)" [currentPage]="page"></app-menu>
-<!--<ng-container [ngSwitch]="page">
-  <ng-container *ngSwitchCase="'main'">
-    <div class="h-screen">
-      <app-main></app-main>
-    </div>
-  </ng-container>
-  <ng-container *ngSwitchCase="'film'">
-    <div class="h-screen">
-      <app-film></app-film>
-    </div>
-  </ng-container> -->
-  <!--<ng-container *ngSwitchCase="'cinema'">
-    <div class="h-screen">
-      <app-cinema></app-cinema>
-    </div>
-  </ng-container>-->
-  <!-- <ng-container *ngSwitchDefault>
-    <h1 class="text-white">Page not found...</h1>
-  </ng-container>
-</ng-container>-->
-
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-menu (selectedPage)="changePage($event)" [currentPage]="page" (onCloseSidenav)="onClose($event, sidenav)"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="bg-[#FF0000] text-black">
+      <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav(sidenav)">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>CAMPUS CINEMA</div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="10px" class="list-none p-0 m-0">
+          <li>
+            <a routerLink="/login" class="hover:text-white active:text-yellow-300">Bejelentkezés</a>
+          </li>
+          <li>
+            <a routerLink="/registration" class="hover:text-white active:text-yellow-300">Regisztráció</a>
+          </li>
+          <li>
+            <a routerLink="/main" class="hover:text-white active:text-yellow-300">Főoldal</a>
+          </li>
+          <li>
+            <a routerLink="/cinema" class="hover:text-white active:text-yellow-300">Cinema</a>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
