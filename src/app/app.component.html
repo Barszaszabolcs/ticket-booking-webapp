@@ -3,13 +3,16 @@
     <app-menu (selectedPage)="changePage($event)" [currentPage]="page" (onCloseSidenav)="onClose($event, sidenav)"></app-menu>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="bg-[#FF0000] text-black">
+    <mat-toolbar class="bg-black text-white">
       <div fxHide.gt-xs>
         <button mat-icon-button (click)="onToggleSidenav(sidenav)">
           <mat-icon>menu</mat-icon>
         </button>
       </div>
-      <div>CAMPUS CINEMA</div>
+      <div fxLayout fxLayoutAlign="space-around start" >
+        <p class="font-bold mr-2">CAMPUS CINEMA</p> 
+        <mat-icon>movie</mat-icon>
+      </div>
       <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
         <ul fxLayout fxLayoutGap="10px" class="list-none p-0 m-0">
           <li>

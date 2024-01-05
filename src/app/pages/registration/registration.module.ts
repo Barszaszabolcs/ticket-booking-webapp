@@ -6,6 +6,7 @@ import { RegistrationComponent } from './registration.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MatInputModule } from '@angular/material/input';
     RegistrationRoutingModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ]
 })
 export class RegistrationModule { }
