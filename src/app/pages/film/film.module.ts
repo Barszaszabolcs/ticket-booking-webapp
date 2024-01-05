@@ -5,6 +5,10 @@ import { FilmRoutingModule } from './film-routing.module';
 import { FilmComponent } from './film.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DateFormatPipe } from '../../shared/pipes/date-format.pipe';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -16,7 +20,11 @@ import { DateFormatPipe } from '../../shared/pipes/date-format.pipe';
     CommonModule,
     FilmRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FlexLayoutModule
   ]
 })
 export class FilmModule { }
