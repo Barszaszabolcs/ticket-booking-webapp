@@ -1,6 +1,6 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav>
-    <app-menu (selectedPage)="changePage($event)" [currentPage]="page" (onCloseSidenav)="onClose($event, sidenav)"></app-menu>
+    <app-menu (selectedPage)="changePage($event)" [currentPage]="page" (onCloseSidenav)="onClose($event, sidenav)" [loggedInUser]="loggedInUser" (onLogout)="logout($event)"></app-menu>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="bg-black text-white">
@@ -15,17 +15,20 @@
       </div>
       <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
         <ul fxLayout fxLayoutGap="10px" class="list-none p-0 m-0">
-          <li>
-            <a routerLink="/login" class="hover:text-white active:text-yellow-300">Bejelentkezés</a>
+          <li *ngIf="!(loggedInUser)">
+            <a routerLink="/login" class="hover:text-[#FF0000] active:text-yellow-300">Bejelentkezés</a>
+          </li>
+          <li *ngIf="loggedInUser">
+            <a routerLink="/main" class="hover:text-[#FF0000] active:text-yellow-300" (click)="logout()">Kijelentkezés</a>
           </li>
           <li>
-            <a routerLink="/registration" class="hover:text-white active:text-yellow-300">Regisztráció</a>
+            <a routerLink="/registration" class="hover:text-[#FF0000] active:text-yellow-300">Regisztráció</a>
           </li>
           <li>
-            <a routerLink="/main" class="hover:text-white active:text-yellow-300">Főoldal</a>
+            <a routerLink="/main" class="hover:text-[#FF0000] active:text-yellow-300">Főoldal</a>
           </li>
           <li>
-            <a routerLink="/cinema" class="hover:text-white active:text-yellow-300">Cinema</a>
+            <a routerLink="/cinema" class="hover:text-[#FF0000] active:text-yellow-300">Cinema</a>
           </li>
         </ul>
       </div>

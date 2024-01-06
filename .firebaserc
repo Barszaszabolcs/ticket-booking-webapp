@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ticket-booking-webapp-93492": {
+      "hosting": {
+        "ticket-booking-webapp": [
+          "ticket-booking-webapp-93492"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ticket-booking-webapp-93492"
+  }
+}

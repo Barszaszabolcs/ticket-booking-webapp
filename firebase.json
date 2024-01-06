@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "ticket-booking-webapp",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
