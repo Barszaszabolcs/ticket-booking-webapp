@@ -26,6 +26,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/registration/registration.module').then(m => m.RegistrationModule)
   },
   {
+    path: 'film-create',
+    loadChildren: () => import('./pages/film-create/film-create.module').then(m => m.FilmCreateModule)
+  },
+  {
     path: '',
     redirectTo: '/main',
     pathMatch: 'full'

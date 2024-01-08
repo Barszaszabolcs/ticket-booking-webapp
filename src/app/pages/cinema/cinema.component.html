@@ -2,7 +2,7 @@
     <div class="w-3/4" *ngFor="let obj of filmObject">
         <div class="flex items-center justify-center flex-wrap" *ngIf="filmObject">
             <div>
-                <p class="text-white">{{obj.name}}</p>
+                <p class="text-white">{{obj.title}}</p>
             </div>
             <div class="basis-full h-0"></div>
             <a class="w-full h-auto" [routerLink]="'/film/' + obj.id"><img class="w-full h-auto" [src]="'assets/images/' + obj.id + '.jpg'" alt=""></a>
